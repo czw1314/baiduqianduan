@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin: 0 20px 0 0;
+
+}
+
+.row div {
+    padding: 0 0 0 20px;
+
+}
+
+.content {
+    box-sizing: border-box;
+    height: 50px;
+    margin-top: 20px;
+    border: 1px solid #999;
+    background-color: #eee
+}

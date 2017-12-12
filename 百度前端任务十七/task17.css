@@ -1,0 +1,13 @@
+#outNum {
+    height: 200px;
+}
+
+span {
+    display: inline-block;
+    margin: 0 5px;
+    list-style: none;
+    background-color: red;
+    font-size: 0px;
+    width: 20px;
+    cursor: pointer;
+}

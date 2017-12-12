@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    padding: 0 40px;
+}
+
+header {
+    position: relative;
+    height: 6rem;
+    border-bottom: 2px solid #938e8c;
+    font-size: 2rem;
+}
+
+header div {
+    position: relative;
+    width: 15rem;
+    height: 6rem;
+    padding-left: 1rem;
+    background-color: #d45d5c;
+    display: inline-block;
+}
+
+header div a {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    color: #ffffff;
+    text-decoration: none
+}
+
+header span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #d45d5c;
+}
+
+section {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 4rem;
+    height: 30rem;
+    position: relative;
+}
+
+.sectionLeft {
+    width: 68%;
+    height: 30rem;
+    background: url(task6_1.jpg) no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.sectionLeft1 {
+    width: 30%;
+    height: 30rem;
+    display: inline-block;
+    background-color: rgb(230, 184, 183);
+    opacity: 0.5;
+}
+
+.sectionLeft2 {
+    width: 30%;
+    height: 30rem;
+    float: right;
+    background-color: rgb(74, 100, 76);
+    opacity: 0.5;
+}
+
+.sectionRight {
+    position: relative;
+    right: 0;
+    float: right;
+    width: 30%;
+    height: 30rem;
+    display: inline-block;
+    border-top: 2px solid #cc8091
+}
+
+.sectionRight > p:nth-of-type(1), .sectionRight > p:nth-of-type(2) {
+    font-size: 3rem;
+    line-height: 4rem;
+    text-decoration: underline;
+    font-variant: small-caps;
+}
+
+.sectionRight > p:nth-of-type(3):first-letter {
+    text-transform: capitalize;
+}
+
+.sectionRight > p:nth-of-type(4) {
+    font-size: 10rem;
+    line-height: 10rem;
+    font-style: italic;
+    color: #75b86b;
+    font-family: 微软雅黑;
+}
+
+.sectionRight > p:nth-of-type(5) {
+    font-size: 5rem;
+    line-height: 5rem;
+}
+
+.sectionRight > p:nth-of-type(6) {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 7rem;
+    left: 7rem;
+}
+
+.sectionRight > p:nth-of-type(5) span {
+    font-size: 1rem;
+    display: inline-block;
+    margin-left: 1rem;
+
+}
+
+aside {
+    margin-top: 2rem;
+    width: 68%;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    color: #767777
+}
+
+aside:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.aside_left {
+    width: 40%;
+    float: left;
+    margin-right: 3rem;
+    color: #767777
+}
+
+.aside_left p:first-child {
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.aside_center {
+    width: 30%;
+    float: left;
+    margin-right: 3rem;
+}
+
+.aside_right {
+    width: 20%;
+    float: left;
+}
+
+.aside_center p:first-child {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #d2994f;
+    text-decoration: underline;
+}
+
+.aside_right p:first-child {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #cc7680;
+    text-decoration: underline;
+}
+
+.aside_right p span:nth-child(n) {
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    color: #cc7680;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.headline {
+    margin-top: 2rem;
+    padding-bottom: 5rem;
+    border-bottom: 0.2rem solid #938e8c;
+    vertical-align: top;
+}
+
+.headline:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.headline_left {
+    width: 50%;
+    font-size: 1.5rem;
+    display: inline-block;
+    color: #767777
+}
+
+.headline_left p:nth-child(1) {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #11456b;
+    font-weight: bold;
+    line-height: 4rem;
+}
+
+.headline_left1 p:nth-child(2) {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.headline_left p span:nth-child(1) {
+    font-style: italic;
+    font-size: 7rem;
+    color: #f5e327;
+}
+
+.first {
+    line-height: 2.5rem;
+    border-top: 0.2rem solid #938e8c;
+}
+
+.first:first-letter {
+    font-size: 7rem;
+    color: #f5e327;
+    float: left;
+    line-height: 7rem;
+    padding-right: 1rem;
+}
+
+.first img {
+    float: right;
+    width: 20%;
+    height: 20%;
+    margin: 2rem 0 2rem 2rem;
+}
+
+.headline_right {
+    width: 48%;
+    float: right;
+}
+
+.headline_right1 {
+    position: relative;
+    height: 30rem;
+    background: url(task6_3.jpg) no-repeat;
+    background-size: cover;
+    margin-bottom: 2rem;
+}
+
+.headline_right12 {
+    position: absolute;
+    bottom: 0;
+    height: 8rem;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.5;
+    color: white;
+}
+
+.headline_right12 p:nth-of-type(1) {
+    float: left;
+    font-size: 3rem;
+    border-left: 2px solid #ffffff;
+    height: 4rem;
+    margin: 2rem 0 2rem 6rem;
+}
+
+.headline_right12 p:nth-of-type(1) span {
+    font-size: 2rem;
+    color: #76a16b;
+    margin-top: 3rem;
+    font-style: italic;
+    height: 2rem;
+}
+
+.headline_right2 {
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #eeedd6
+}
+
+.triangle::before {
+    position: absolute;
+    content: "";
+    height: 0;
+    border-bottom: 1rem solid #10456b;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    left: -1.5rem;
+    top: 0.9rem;
+}
+
+.triangle {
+    position: relative;
+    font-size: 2rem;
+    color: #5a5b5b;
+    margin: 3rem;
+    line-height: 2rem;
+}
+
+.triangle > p span {
+    font-style: italic;
+    font-size: 1.8rem;
+    text-align: right;
+}
+
+.bottom_left {
+    width: 48%;
+    float: left;
+    color: white;
+    background-color: #d45d5c
+}
+
+.bottom_left p {
+    font-size: 12rem;
+    float: left;
+    margin: 2rem;
+    padding: 0 1rem;
+    line-height: 10rem;
+    border-right: 0.2rem solid
+}
+
+.bottom_left span:nth-of-type(1) {
+    margin-top: 2rem;
+    float: left;
+    font-size: 3rem;
+    font-style: italic;
+    line-height: 3.5rem;
+}
+
+.bottom_left span:nth-of-type(2) {
+    float: left;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.bottom_right {
+    float: right;
+    width: 43%;
+    margin-right: 2rem;
+}
+
+.bottom_right p {
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    text-indent: 2em;
+    float: left;
+}
+
+.mark-one {
+    float: left;
+    font-size: 7rem;
+    margin: 2rem 0 0 -7.5rem;
+    width: 0;
+}
+
+.mark-two {
+    float: right;
+    font-size: 7rem;
+    margin: 3rem -2rem 0 0;
+}
+
+footer {
+    clear: both;
+    padding: 0;
+    text-align: right;
+    color: #d45d5c;
+    font-size: 1.5rem;
+}
+

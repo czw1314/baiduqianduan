@@ -1,0 +1,10 @@
+li {
+    display: inline-block;
+    background-color: #cd4a48;
+    color: #f3f6f7;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>任务六：基础JavaScript练习（三）</title>
+    <style type="text/css">
+        .item {
+
+            padding: 15px 20px;
+            background-color: red;
+            display: inline-block;
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<textarea placeholder="请输入字符并用不同符号分隔" rows="10" cols="20" id="textarea"></textarea>
+<input type="button" value="插入" id="insert"/>
+<input type="button" value="查询" id="search"/>
+<button name="" id="leftInsert">左增加</button>
+<button name="" id="rightInsert">右增加</button>
+<button name="" id="leftDelete">左删除</button>
+<button name="" id="rightDelete">右删除</button>
+<input type="text" id="keyWord"/>
+<div id="container" class="container">
+</div>
+<script>
+    //定义一个数组用于存放输入的内容
+
+    var data = [];//每次要加的内容;=
+    var arr = [];
+    var textarea = document.getElementById('textarea');
+    var keysWord = document.getElementById("keyWord");
+
+    //判断输入的合法性
+    function judege() {
+        var pattern = /^[\u4E00-\u9FA5A-Za-z0-9\r,，、\s\n]+$/;  //只能输入满足这个条件的文本
+        if (textarea.value == "") {
+            alert("输入为空");
+            return 1;
+        }
+        if (!pattern.test(textarea.value)) {
+            alert("只能输入中文，数字和英文以及特定符号");
+            return 1
+        }
+        return 0
+    }
+
+    //判断查询框输入的合法性
+    function judeges() {
+        var pattern = /^[\u4E00-\u9FA5A-Za-z0-9]+$/;  //只能输入满足这个条件的文本
+        if (keysWord.value == "") {
+            alert("输入为空");
+            return 1;
+        }
+        if (!pattern.test(keysWord.value)) {
+            alert("只能输入中文，数字和英文");
+            return 1
+        }
+        else {
+            return 0
+        }
+    }
+
+    //需要显示的数组
+    function push() {
+        if (judege()) {
+            textarea.value = "";
+        }
+        else {
+            var text = textarea.value.trim();
+            var texts = text.split(/[,，、\s\n]/);
+            var words = texts.filter(function (str, index, array) {
+                if (str.length >= 1) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            })
+            data = words
+            textarea.value = ""
+            renderArr()
+        }
+    }
+
+    //左增加
+    function leftInQueue(num) {
+        if (judege()) {
+            return;
+        }
+        else {
+            push()
+            for (var i = 0; i < data.length; i++) {
+                arr.unshift(data[data.length - 1 - i])
+            }
+
+        }
+        renderArr()
+        textarea.value = ""
+    }
+
+    //右增加
+    function rightInQueue(num) {
+        if (judege()) {
+            return;
+        }
+        else {
+            push()
+            for (var i = 0; i < data.length; i++) {
+                arr.push(data[i])
+            }
+        }
+        renderArr()
+        textarea.value = ""
+    }
+
+    //-----------------------------------
+    function leftOutQueue() {
+        arr.shift()
+        renderArr()
+    }
+
+    //----------------------------
+    function rightOutQueue() {
+        arr.pop();
+        renderArr()
+    }
+
+    //显示格式
+    function renderArr() {
+        document.getElementById("container").innerHTML = "";
+        for (var i = 0; i < arr.length; i++) {
+            var span = document.createElement('span');
+            span.setAttribute("class", "item");
+            span.innerHTML = arr[i];
+            document.getElementById('container').appendChild(span);
+        }
+
+    }
+
+    document.getElementById('leftInsert').onclick = function () {
+        inputNum = document.getElementById('textarea').value;
+        leftInQueue(inputNum);
+    };
+    document.getElementById('rightInsert').onclick = function () {
+        inputNum = document.getElementById('textarea').value;
+        rightInQueue(inputNum);
+    }
+
+    document.getElementById('leftDelete').onclick = leftOutQueue;
+    document.getElementById('rightDelete').onclick = rightOutQueue;
+    document.getElementById('insert').onclick = push;
+    document.getElementById('search').onclick = search;
+
+    //匹配
+    function search() {
+        if (judeges()) {
+            keysWord.value = "";
+
+        }
+        else {
+            var keyWord = keysWord.value;
+            var pattern = new RegExp(eval('/' + keyWord + '/'))
+            var span = document.getElementsByTagName("span");
+            for (var i = 0; i < span.length; i++) {
+                if (pattern.test(span[i].innerHTML)) {
+                    span[i].style.backgroundColor = "blue";
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

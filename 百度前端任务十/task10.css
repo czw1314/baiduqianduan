@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*设置盒子的大小外观*/
+
+.flex-box {
+    box-sizing: border-box;
+    width: 150px;
+}
+
+.container {
+    box-sizing: border-box;
+    border: 2px solid lightgray;
+    padding: 10px;
+}
+
+.box-1 {
+    border: 2px solid #f00;
+    height: 120px;
+    margin: 10px;
+}
+
+.box-2 {
+    border: 2px solid #f00;
+    height: 100px;
+    margin: 10px;
+}
+
+.box-3 {
+    border: 2px solid #f00;
+    height: 40px;
+    margin: 10px;
+}
+
+.box-4 {
+    border: 2px solid blue;
+    height: 200px;
+    margin: 10px;
+}
+
+/*开始flex的设置*/
+
+/*设置容器的flex模式*/
+
+.container {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*设置小屏幕样式*/
+
+@media screen and (max-width: 640px) {
+    .container {
+        align-items: flex-start;
+    }
+
+    .box-4 {
+        order: -1;
+    }
+}

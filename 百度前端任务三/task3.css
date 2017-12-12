@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #eee;
+    border: 1px solid;
+    padding: 20px;
+}
+
+.container:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.left {
+    width: 200px;
+    float: left;
+    padding: 20px;
+    border: 1px solid;
+}
+
+#logo {
+    width: 80px;
+    height: 80px;
+    display: inline;
+
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    margin: 20px 0;
+
+}
+
+.name {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: top;
+}
+
+.main {
+    width: calc(100% - 444px);
+
+    margin: 0 20px;
+    border: 1px solid;
+    float: left;
+    padding: 0 20px;
+}
+
+.right {
+    box-sizing: border-box;
+    width: 120px;
+    float: right;
+    padding: 0 20px;
+    border: 1px solid;
+}
